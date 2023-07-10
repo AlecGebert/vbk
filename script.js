@@ -26,7 +26,7 @@ function typeLine() {
       }
     }
     typeLine();
-  }, 100);
+  }, 50);
 }
 typeLine();
 

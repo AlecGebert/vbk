@@ -85,7 +85,9 @@ body {
     right: -40rem;
     transition: right 0.5s;
     z-index: 300;
-    background: #fff;
+    background: url(./images/bgra.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .change .sidebar {
@@ -107,10 +109,11 @@ body {
 }
 
 .menu-link {
-    font-weight: 500;
-    font-size: 2.2rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 0.3rem;
     color: rgb(107, 187, 150);
-    ;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
     /* position: relative; */
 }
 
@@ -158,10 +161,7 @@ body {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    /* text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
+
 }
 
 .video-wrapper video {
@@ -172,8 +172,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: -9;
-    /* opacity: 0.5;
-    filter: brightness(25%); */
+
 }
 
 .header {
@@ -252,7 +251,7 @@ body {
 .banner {
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2;
     /* padding-bottom: 5rem; */
 }
@@ -266,6 +265,18 @@ body {
     margin-top: 5%;
     width: 60%;
     /* margin-bottom: 5rem; */
+
+}
+
+.banner-inner {
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
 }
 
 .banner-presentation h1 {
@@ -276,8 +287,9 @@ body {
     line-height: 9rem;
     letter-spacing: .2rem;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-    /* opacity: 0;
-    animation: moveBanner 1s 0.5s forwards; */
+    opacity: 0;
+    filter: blur(0.4rem);
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .banner-presentation h1 span {
@@ -293,13 +305,22 @@ body {
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
     /* opacity: 0;
     animation: moveBanner 1s 0.7s forwards; */
-
+    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    opacity: 0;
+    filter: blur(0.4rem);
 }
 
 .banner-presentation p span {
     font-weight: 600;
     font-size: 2.8rem;
     color: rgb(107, 187, 150);
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
 }
 
 .quote {
