@@ -38,3 +38,57 @@ Array.from(document.querySelectorAll(".menu-link")).forEach((item) => {
     document.querySelector(".container").classList.remove("change");
   };
 });
+
+const activiti = function () {
+  var galleryItems = document.querySelectorAll(".item");
+  for (let i = 0; i < galleryItems.length; i++) {
+    galleryItems[i].classList.toggle(
+      "active",
+      galleryItems[i].scrollTop > 0 || document.documentElement.scrollTop > 0
+    );
+  }
+};
+
+const moving = function () {
+  var galleryItems = document.querySelectorAll(".cart");
+  for (let i = 0; i < galleryItems.length; i++) {
+    galleryItems[i].classList.toggle(
+      "move",
+      galleryItems[i].scrollTop > 0 || document.documentElement.scrollTop > 0
+    );
+  }
+};
+window.onscroll = function () {
+  moving();
+  activiti();
+};
+// Slider
+
+let slider = tns({
+  container: ".my-slider",
+  slideBy: 1,
+  speed: 600,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayButtonOutput: false,
+  nav: false,
+  controls: false,
+  // controlsContainer: "#controls",
+  // prevButton: ".previous",
+  // nextButton: ".next",
+  responsive: {
+    1440: {
+      items: 3,
+      gutter: 20,
+    },
+    768: {
+      items: 2,
+      gutter: 20,
+    },
+    480: {
+      items: 1,
+    },
+  },
+});
+
+// Slider End
