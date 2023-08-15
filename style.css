@@ -384,7 +384,7 @@ body {
 }
 
 .section-tilte {
-    width: 25%;
+    width: 50%;
     margin: 0 auto;
     text-align: center;
     font-size: 5rem;
@@ -736,6 +736,7 @@ body {
 .slider-wrapper {
     width: 100%;
     margin: auto;
+
 }
 
 #controls {
@@ -784,6 +785,7 @@ body {
 
 .slide-style {
     text-align: center;
+
 }
 
 .slide-img {
@@ -804,6 +806,7 @@ body {
     color: rgb(107, 187, 150);
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
     margin-top: 2rem;
+
 }
 
 /* SLD_2 */
@@ -841,7 +844,8 @@ body {
     background: #626866;
     border-radius: 1rem;
     padding: 2rem;
-
+    position: relative;
+    /* max-height: 67rem; */
 }
 
 .blog-img {
@@ -891,6 +895,24 @@ body {
     line-height: 2.5rem;
     color: #FFFFFF;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.hidden-link {
+    position: absolute;
+    bottom: -10rem;
+    transition: bottom 0.3s;
+    z-index: 100;
+    background: rgb(107, 187, 150);
+}
+
+.blog-item:hover .hidden-link {
+    bottom: 50%;
+    left: 30%;
+    transition: bottom 0.3s 0.3s;
+}
+
+.empty:hover {
+    opacity: 0.2;
 }
 
 
@@ -1174,10 +1196,122 @@ iframe {
     font-size: 1.8rem;
     line-height: 2.8rem;
     color: #FFFFFF;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0.3rem 0.5rem rgba(160, 91, 91, 0.4);
     margin-top: 5rem;
     text-align: center;
 }
+
+/* Service-counting-page */
+.service-counting {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.service-counting-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 7rem;
+}
+
+.service-counting-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.service-button,
+.taxes-button,
+.edu-button,
+.staff-button,
+.ones-button,
+.another-button {
+    width: 31%;
+    height: 10rem;
+    border: 0.1rem solid rgb(107, 187, 150);
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    /* line-height: 2.8rem; */
+    background: #FFFFFF;
+    margin-top: 2rem;
+    text-align: center;
+    color: #4b4e4d;
+    cursor: pointer;
+}
+
+.service-button:hover,
+.taxes-button:hover,
+.edu-button:hover,
+.staff-button:hover,
+.ones-button:hover,
+.another-button:hover {
+    background-color: #626866;
+    color: rgb(107, 187, 150);
+
+}
+
+.service-button:active,
+.taxes-button:active,
+.edu-button:active,
+.staff-button:active,
+.ones-button:active,
+.another-button:active {
+    background-color: #626866;
+    color: rgb(107, 187, 150);
+
+}
+
+.service-article {
+    width: 100%;
+    background: #FFFFFF;
+    border: 0.1rem solid rgb(107, 187, 150);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    /* display: none; */
+}
+
+.service-article-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: #4b4e4d;
+
+}
+
+.service-counting-line {
+    width: 100%;
+    border-bottom: 0.05rem solid rgb(107, 187, 150);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-article-text {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #4b4e4d;
+
+}
+
+.service-article a {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: rgb(107, 187, 150);
+    margin-top: 2rem;
+}
+
+
+
+/* .view {
+    display: block;
+} */
+
+/* End of Service-counting-page */
 
 /* Media */
 
@@ -1253,9 +1387,9 @@ iframe {
         gap: 4rem;
     }
 
-    /* .blog-item {
-        width: 100%;
-    } */
+    .section-tilte {
+        width: 70%;
+    }
 }
 
 @media(max-width: 768px) {
@@ -1272,9 +1406,9 @@ iframe {
         width: 100%;
     }
 
-    .section-tilte {
+    /* .section-tilte {
         width: 50%;
-    }
+    } */
 
     .about-info-container {
         flex-direction: column;
@@ -1362,8 +1496,8 @@ iframe {
     }
 
     .section-tilte {
-        width: 70%;
-        font-size: 4rem;
+        width: 90%;
+        font-size: 3rem;
     }
 
     .section-subtitle {
@@ -1376,6 +1510,15 @@ iframe {
         line-height: 2.8rem;
     }
 
+    .service-button,
+    .taxes-button,
+    .edu-button,
+    .staff-button,
+    .ones-button,
+    .another-button {
+        width: 48%;
+        font-size: 1.4rem;
+    }
 }
 
 @media(max-width: 491px) {
@@ -1471,8 +1614,8 @@ iframe {
     }
 
     .section-tilte {
-        width: 75%;
-        font-size: 3.5rem;
+        width: 90%;
+        font-size: 2.6rem;
     }
 
     .cart h2 {
