@@ -898,6 +898,7 @@ body {
 }
 
 .hidden-link {
+    color: #fff;
     position: absolute;
     bottom: -10rem;
     transition: bottom 0.3s;
@@ -909,6 +910,20 @@ body {
     bottom: 50%;
     left: 30%;
     transition: bottom 0.3s 0.3s;
+}
+
+.hidden-link:hover {
+    color: #fff;
+    background: rgb(107, 187, 150);
+    background-image: none;
+    background-blend-mode: none;
+    transition: none;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.hidden-link:hover .empty {
+    opacity: 0.2;
 }
 
 .empty:hover {
@@ -1581,9 +1596,9 @@ iframe {
         width: 100%;
     }
 
-    .controller {
+    /* .controller {
         display: none;
-    }
+    } */
 
 }
 

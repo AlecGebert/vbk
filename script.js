@@ -338,6 +338,7 @@ let sliderTwo = tns({
   controlsContainer: "#controls",
   prevButton: ".previous",
   nextButton: ".next",
+  touch: false,
   responsive: {
     1440: {
       items: 3,
@@ -352,4 +353,3 @@ let sliderTwo = tns({
     },
   },
 });
-
